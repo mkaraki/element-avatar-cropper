@@ -1,0 +1,39 @@
+@import 'vanilla-framework';
+@include vanilla;
+
+.hide {
+    display: none;
+}
+
+.cropper-view-container {
+    width: 100%;
+    height: 75vh;
+    position: relative;
+}
+
+.cropper-view {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+img.cropper-view {
+    object-fit: contain;
+}
+
+.element-sizings img {
+    aspect-ratio: 1 / 1;
+    border-radius: var(--cpd-avatar-radius);
+    inline-size: var(--cpd-avatar-size);
+}
+
+.element-sizings > div {
+    border: 1px solid black;
+}
+
+.element-sizings.dark {
+    background-color: #101317;
+    color: white;
+}

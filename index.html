@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Element向けアバター変換アプリケーション</title>
+    </head>
+    <body class="">
+        <header>
+            <div class="p-strip--highlighted">
+                <div class="row--25-75">
+                    <div class="col">
+                        <h1>Element向けアバター変換アプリケーション</h1>
+                        <p>Elementで利用出来るユーザおよびチャンネルアバターを実際の表示画面を確認しながら設定出来ます。</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="p-strip is-shallow">
+                <div class="row">
+                    <div class="col">
+                        <div>
+                            <form onsubmit="return false">
+                                <label for="fileInput">画像ファイルを選択</label>
+                                <input type="file" id="fileInput" name="fileInput">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="p-image-container is-highlighted cropper-view-container hide" id="cropperViewContainer">
+                            <img class="p-image-container__image cropper-view" alt="" id="cropperView" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <hr />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <button class="p-button--positive" id="dl-avater" disabled>アバターのダウンロード</button>
+                    </div>
+                    <div class="col">
+                        <label class="p-checkbox">
+                            <input type="checkbox" aria-labelledby="darkCheckLbl" class="p-checkbox__input" id="darkCheck">
+                            <span class="p-checkbox__label" id="darkCheckLbl">ダークモードをプレビューする</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <hr />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col element-sizings">
+                        <div class="profile-view" style="width: 275px; padding: 16px; padding-top: 48px;">
+                            <div style="--cpd-avatar-size: 120px; --cpd-avatar-radius: 50%; margin: 0 auto; width: 120px">
+                                <img src="/237.jpg" />
+                            </div>
+                            <div style="margin-top: 8px; text-align: center;">
+                                <div style="font-family: sans-serif; font-size: 1.25rem; line-height: 1.5625rem;">
+                                    Jane Doe
+                                </div>
+                                <div style="font-family: sans-serif; font-size: 0.8125rem; line-height: 1.5;">
+                                    アイドル時間 46秒
+                                </div>
+                                <div style="font-family: sans-serif; font-size: 0.8125rem; line-height: 1.5; color: #808994;">
+                                    @jane.doe:example.com
+                                </div>
+                            </div>
+                        </div>
+                        <div class="message-cozy" style="padding: 18px; padding-top: 0;">
+                            <div style="padding-top: 18px; position: relative;">
+                                <div style="margin-left: 64px;">
+                                    <span style="color: rgb(93, 38, 205); font-size: 0.9375rem; line-height: 1.5;">
+                                        Jane Doe
+                                    </span>
+                                </div>
+                                <div style="
+                                    position: absolute; left: 8px; width: 30px; top: 14px; height: 30px;
+                                    --cpd-avatar-size: 30px; --cpd-avatar-radius: 50%;
+                                    ">
+                                        <img src="/237.jpg" />
+                                    </div>
+                                    <div style="padding-left: 64px; margin-right: 80px;">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut neque non ex mollis consequat. Cras aliquet dolor et elementum elementum. Aliquam maximus ante eu velit tincidunt, vel tristique orci hendrerit. Mauris nibh sem, sagittis vitae ex id, consectetur blandit quam. Ut maximus tempus felis a mollis.
+                                    </div>
+                                    <div style="position: absolute; right: 0; bottom: 0; padding: 4px;">
+                                        <div style="
+                                            --cpd-avatar-size: 14px; --cpd-avatar-radius: 50%;
+                                            ">
+                                                <img src="/237.jpg" />
+                                            </div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="message-irc" style="padding: 18px; padding-top: 0;">
+                            <div style="padding-top: 18px; position: relative; --cpd-avatar-size: 14px; --cpd-avatar-radius: 50%;">
+                                <div style="width: calc(100% - 90px)">
+                                    <div style="float: left; font-color: #808994; font-size: .625rem; margin-right: 5px;">
+                                        午前09:00
+                                    </div>
+                                    <div style="float: left;">
+                                        <div style="float: left; margin-right: 5px;">
+                                            <img src="/237.jpg" />
+                                        </div>
+                                        <span style="color: rgb(93, 38, 205); font-size: 0.9375rem; line-height: 1.5; clear: float;">
+                                            Jane Doe
+                                        </span>
+                                    </div>
+                                    <div>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    </div>
+                                </div>
+                                <div style="position: absolute; right: 0; top: 6px; padding: 4px;">
+                                    <img src="/237.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="channel-info-view" style="width: 275px; padding: 16px; padding-top: 20px;">
+                            <div style="--cpd-avatar-size: 80px; --cpd-avatar-radius: 50%; margin: 0 auto; width: 80px">
+                                <img src="/237.jpg" />
+                            </div>
+                            <div style="margin-top: 8px; text-align: center;">
+                                <div style="font-family: sans-serif; font-size: 1.5rem; font-weight: 600; line-height: 1.25;">
+                                    times-jane-doe
+                                </div>
+                                <div style="font-family: sans-serif; font-size: 0.8125rem; line-height: 1.5; color: #808994;">
+                                    #times-jane-doe:example.com
+                                </div>
+                            </div>
+                        </div>
+                        <div class="channel-list" style="padding: 8px 0; max-width: 320px;">
+                            <div style="
+                                margin: 0 12px; padding: 0 8px; --cpd-avatar-size: 32px; --cpd-avatar-radius: 50%;
+                                display: flex; 
+                                ">
+                                <div style="width: 32px; margin-right: 12px;">
+                                    <img src="/237.jpg" />
+                                </div>
+                                <div style="clear: float; display: flex; align-items: center; flex-direction: row; justify-content: space-between;">
+                                    <span style="font-weight: 600; font-size: 0.9375rem; line-height: 1.5; clear: float;">
+                                        times-jane-doe
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="channel-header" style="padding: 8px;">
+                            <div style="
+                                margin: 0; padding: 0 18px; --cpd-avatar-size: 40px; --cpd-avatar-radius: 50%;
+                                height: 64px;
+                                display: flex; 
+                                ">
+                                <div style="
+                                    width: 40px; margin-right: 12px;
+                                    display: flex; align-items: center; justify-content: space-between;
+                                    ">
+                                    <div style="width: 40px; height: 40px;">
+                                        <img src="/237.jpg" />
+                                    </div>
+                                </div>
+                                <div style="display: flex; align-items: center; justify-content: space-between; width: calc(100% - 52px);">
+                                    <div style="font-weight: 600; font-size: 1.0625rem; line-height: 1.5; clear: float;">
+                                        times-jane-doe
+                                    </div>
+                                    <div>
+                                        <div style="
+                                            --cpd-avatar-size: 20px; padding: 6px;
+                                            display: flex; align-items: center; justify-content: space-between;
+                                            font-size: 0.8125rem; font-weight: 500px; line-height: 1.5; color: #656d77;
+                                            ">
+                                            <div style="display: inline-block; margin-right: 8px;">
+                                                <img src="/237.jpg" />
+                                            </div>
+                                            1
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <hr />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        Copyright (c) 2026 mkaraki.
+                        <a href="legal.html">OSS License Info</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script type="module" src="/src/main.ts"></script>
+    </body>
+</html>
