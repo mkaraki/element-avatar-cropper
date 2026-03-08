@@ -78,7 +78,7 @@ const prepareCropperView = () => {
     dlAvaterBtn.onclick = () => {
       var image = dataUrl.replace("image/png", "image/octet-stream");
       var link = document.createElement("a");
-      link.download = "avater_image.webp";
+      link.download = "avatar_image.webp";
       link.href = image;
       link.click();
     };
